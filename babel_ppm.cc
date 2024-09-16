@@ -68,15 +68,15 @@ template<int>
 struct Conf;
 
 template<>
-struct Conf<4>{
-	constexpr static uint64_t MAX		= 4;
-	constexpr static uint16_t COLUMNS	= 64;
+struct Conf<3>{
+	constexpr static uint64_t MAX		= 3;
+	constexpr static uint16_t COLUMNS	= 32;
 };
 
 template<>
-struct Conf<3>{
-	constexpr static uint64_t MAX		= 3;
-	constexpr static uint16_t COLUMNS	= 24;
+struct Conf<4>{
+	constexpr static uint64_t MAX		= 4;
+	constexpr static uint16_t COLUMNS	= 64;
 };
 
 template<>
@@ -91,7 +91,7 @@ struct Conf<6>{
 	constexpr static uint16_t COLUMNS	= 4096;
 };
 
-using MyConf = Conf<6>;
+using MyConf = Conf<3>;
 
 constexpr uint64_t MAX		= MyConf::MAX;
 constexpr uint16_t COLUMNS	= MyConf::COLUMNS;
